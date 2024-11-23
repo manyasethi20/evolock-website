@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details {
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+
+        .product-details img {
+            padding-top: 20px;
+            max-width: 150px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-details p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .tracking-details {
+            margin-top: 30px;
+        }
+
+        .tracking-details h3 {
+            margin-bottom: 15px;
+            color: #0C1325;
+            text-align: center;
+        }
+
+        .tracking-item {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .tracking-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tracking-item .status {
+            width: 15px;
+            height: 15px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .tracking-item .status.completed {
+            background-color: green;
+        }
+
+        .tracking-item p {
+            margin: 0;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .tracking-date {
+            margin-left: auto;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 5px;
+            background-color: #0C1325;
+            color: white;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 0 0 12px 12px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer a {
+            color: #0C1325;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Order Details</h1>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="product-details">
+            <img src="temperProof.jpg" alt="Product Image">
+            <h2>Evolock</h2>
+            <p>Buds Aero With 45hrs Playtime, Instacharge and 13mm Driver Truly Wireless Earbuds</p>
+            <p><strong>Size:</strong> Onesize</p>
+            <p><strong>Expected Delivery:</strong> Tomorrow</p>
+        </div>
+
+        <!-- Tracking Details Section -->
+        <div class="tracking-details">
+            <h3>Product Tracking Details</h3>
+
+            <div class="tracking-item">
+                <div class="status completed"></div>
+                <p><strong>Order Placed</strong></p>
+                <span class="tracking-date">16 Nov</span>
+            </div>
+
+            <div class="tracking-item">
+                <div class="status completed"></div>
+                <p><strong>Shipped</strong> to nearest delivery center</p>
+                <span class="tracking-date">16 Nov, 05:07 PM</span>
+            </div>
+
+            <div class="tracking-item">
+                <div class="status completed"></div>
+                <p><strong>Received</strong> at LUH Ludhiana</p>
+                <span class="tracking-date">17 Nov, 06:48 PM</span>
+            </div>
+
+            <div class="tracking-item">
+                <div class="status completed"></div>
+                <p><strong>Expected</strong> at ShoghiODH_SOG Solan</p>
+                <span class="tracking-date">18 Nov, 12:55 AM</span>
+            </div>
+
+            <div class="tracking-item">
+                <div class="status"></div>
+                <p><strong>Arriving</strong> Tomorrow</p>
+                <span class="tracking-date">18 Nov</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Need help? Visit our <a href="#">support center</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

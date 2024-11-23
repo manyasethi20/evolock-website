@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+    <style>
+        /* Order Form Section */
+        .order-form-section {
+            padding: 40px 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .order-form-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .order-form-section form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .order-form-section form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .order-form-section form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0C1325;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .order-form-section form button:hover {
+            background-color: #677B9E;
+        }
+
+        /* Tracking Section */
+        .tracking-section {
+            padding: 20px;
+            background-color: #eef2f3;
+            text-align: center;
+        }
+
+        .tracking-section h3 {
+            margin-bottom: 15px;
+        }
+
+        .tracking-section input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .tracking-section button {
+            padding: 10px;
+            background-color: #0C1325;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .tracking-section button:hover {
+            background-color: #677B9E;
+        }
+
+        .tracking-result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function submitOrder(event) {
+            event.preventDefault();
+            alert("Your order is confirmed! Thank you for shopping with us.");
+        }
+
+        function trackOrder() {
+            const trackingInput = document.getElementById('tracking-input').value;
+            const trackingResult = document.getElementById('tracking-result');
+
+            if (trackingInput.trim() === "") {
+                trackingResult.textContent = "Please enter a valid tracking ID.";
+                return;
+            }
+
+            // Simulate tracking functionality (this can be extended with real API integration)
+            trackingResult.textContent = `The product with Tracking ID '${trackingInput}' is currently in transit.`;
+        }
+    </script>
+</head>
+<body>
+    <section class="order-form-section">
+        <h2>Place Your Order</h2>
+        <form onsubmit="submitOrder(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Your Address" required>
+            <input type="text" placeholder="Product Name" required>
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <section class="tracking-section">
+        <h3>Track Your Product</h3>
+        <input type="text" id="tracking-input" placeholder="Enter Tracking ID">
+        <button onclick="trackOrder()">Track</button>
+        <div id="tracking-result" class="tracking-result"></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVOLock - Tamper-Proof Packaging</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>hello@evolock.com | Free shipping on orders above 2 products!</span>
+        <div>
+            <a href="#">English</a> |
+            <a href="#">Login</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header>
+        <div class="main-nav">
+            <div class="logo">EVOLOCK</div>
+            <div class="search-bar">
+                <select>
+                    <option>All Departments</option>
+                    <option>Secure Box</option>
+                    <option>Seal Can</option>
+                    <option>Customizable Solutions</option>
+                </select>
+                <input type="text" placeholder="What do you need?">
+                <button>Search</button>
+            </div>
+            <div class="contact-info">
+                <span>📞 +91 8080808080 | Support 24/7 Time</span>
+                <span>🛒 Item: INR 150.00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Secure Your Expensive Products with EVOLOCK</h1>
+        <p>We specialize in tamper-proof packaging solutions for online orders. Ensure safety and security with our Polycarbonate Packaging System.</p>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div>
+            <img src="temperProof.jpg" alt="Tamper Proof" style="width: 130px; height: 130px;">
+            <h2>100% Tamper Proof</h2>
+            <p>Our products are designed to prevent unauthorized access and ensure the safety of your packages.</p>
+        </div>
+        <div>
+            <img src="EcofriendlyMaterial.jpg" alt="Eco Friendly" style="width: 130px; height: 130px;">
+            <h2>Eco-Friendly Materials</h2>
+            <p>We use sustainable and recyclable materials, contributing to a greener planet.</p>
+        </div>
+        <div>
+            <img src="customizableSolutions.jpg" alt="Customizable" style="width: 130px; height: 130px;">
+            <h2>Customizable Solutions</h2>
+            <p>Tailor-made packaging options to suit your business needs and branding requirements.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Secure Box</h3>
+                <p>Durable and secure, ideal for high-value shipments.</p>
+                <button onclick="openOrderForm('Secure Box')">Buy Now</button>
+            </div>
+            <div class="product">
+                <h3>Seal Can</h3>
+                <p>Perfect for liquids and perishable items with tamper-evident seals.</p>
+                <button onclick="openOrderForm('Seal Can')">Buy Now</button>
+            </div>
+            <div class="product">
+                <h3>Customizable Solutions</h3>
+                <p>Customizable solutions with digital locks for enhanced security.</p>
+                <button onclick="openOrderForm('Customizable Solutions')">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section class="order-form-section">
+        <h2 ><a href="PlaceOrder.html" style="text-decoration: none;">Place Your Order <img src="shopping-bag.png" alt="shopping bag" style="height: 30px; width: 30px; padding-top: 50px; "> </a></h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Your Address" required>
+            <input type="text" placeholder="Product Name" required>
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+    <h1 style="text-align: center;"><a href="Order.html" style="text-decoration: none;">Your order <img src="tracking.png" alt="Tracking Image" style="height: 50px; width: 40px; padding-top: 100px;"> </a></h1>
+
+    <!-- Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="orderModal">
+        <h2>Place Your Order</h2>
+        <p id="productInfo"></p>
+        <form>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="address" placeholder="Your Address" required>
+            <button type="button" onclick="submitOrder()">Submit Order</button>
+            <button type="button" class="close-btn" onclick="closeOrderForm()">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 EVOLock. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let selectedProduct = "";
+
+        function openOrderForm(product) {
+            selectedProduct = product;
+            document.getElementById("productInfo").innerText = `Product: ${product}`;
+            document.getElementById("overlay").classList.add("active");
+            document.getElementById("orderModal").classList.add("active");
+        }
+
+        function closeOrderForm() {
+            document.getElementById("overlay").classList.remove("active");
+            document.getElementById("orderModal").classList.remove("active");
+        }
+
+        function submitOrder() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const address = document.getElementById("address").value;
+
+            if (name && email && address) {
+                alert(`Order placed successfully for ${selectedProduct} by ${name}!`);
+                closeOrderForm();
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+</body>
+</html>
+

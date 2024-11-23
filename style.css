@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #0C1325;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #f8f8f8;
+    font-size: 14px;
+    color: #333;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: #0f1626;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar select {
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: white;
+    color: #0f1626;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.contact-info button {
+    padding: 8px 15px;
+    background-color: #0C1325;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.contact-info button:hover {
+    background-color: #677B9E;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #677B9E;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #f1f1f1;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #0f1626;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.features div {
+    width: 30%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 1.5em;
+    color: #0f1626;
+}
+
+/* Products Section */
+.products-section {
+    background-color: #677B9E;
+    color: white;
+    padding: 40px 0;
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    background-color: white;
+    color: #0C1325;
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product button {
+    background-color: #0C1325;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.product button:hover {
+    background-color: #677B9E;
+}
+
+/* Order Form Section */
+.order-form-section {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.order-form-section h2 {
+    margin-bottom: 20px;
+}
+
+.order-form-section form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.order-form-section form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.order-form-section form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0C1325;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.order-form-section form button:hover {
+    background-color: #677B9E;
+}
+
+/* Footer */
+footer {
+    background-color: #0f1626;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 400px;
+}
+
+.modal.active {
+    display: block;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.close-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
